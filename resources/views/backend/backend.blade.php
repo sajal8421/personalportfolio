@@ -1,5 +1,5 @@
 @extends('layouts.backendapp')
-
+@section('title', 'Dashboard | ')
 @section('content')
 <div class="row" style="display: inline-block;">
     <div class="tile_count">
