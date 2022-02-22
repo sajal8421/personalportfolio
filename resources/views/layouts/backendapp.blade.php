@@ -12,6 +12,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title') {{ config('app.name') }}</title>
 
+    @yield('backend_css')
+
     <link href="{{ asset('backend/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <link href="{{ asset('backend/css/font-awesome.min.css') }}" rel="stylesheet">
