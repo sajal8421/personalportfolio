@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\BackendController;
 use App\Http\Controllers\Backend\BannerController;
+use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -23,9 +24,13 @@ Auth::routes();
 
 Route::name('backend.')->group(function(){
     Route::get('/dashboard', [BackendController::class, 'index'])->name('home');
+    // banner routes
     Route::resource('/banner', BannerController::class)->except(['show']);    
     Route::get('/banner/status/{banner}', [BannerController::class, 'status'])->name('banner.status');    
     Route::get('/banner/restore/{id}', [BannerController::class, 'restore'])->name('banner.restore');    
-    Route::get('/banner/hard/delete/{id}', [BannerController::class, 'harddelete'])->name('banner.harddelete');    
+    Route::get('/banner/hard/delete/{id}', [BannerController::class, 'harddelete'])->name('banner.harddelete');
+    
+    //product category routes
+    Route::resource('/category', CategoryController::class);
 });
 
