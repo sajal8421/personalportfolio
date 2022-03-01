@@ -66,7 +66,11 @@
 
                                 <li><a><i class="fa fa-edit"></i> Product <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
+                                        <li><a href="{{ route('backend.product.index') }}">All Product</a></li>
+                                        <li><a href="{{ route('backend.product.create') }}">Add Product</a></li>
                                         <li><a href="{{ route('backend.category.index') }}">Category</a></li>
+                                        <li><a href="{{ route('backend.size.index') }}">Size</a></li>
+                                        <li><a href="{{ route('backend.color.index') }}">Color</a></li>
                                     </ul>
                                 </li>
 
